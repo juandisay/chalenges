@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sohoo"
+version = "0.1.1"
+authors = [
+    {name = "juandisay", email = "info@juandisay.org"},
+]
+description = "A sohoo module"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+
+dependencies = [
+    "requests>=2.25.0",
+    "urllib3>=1.26.0",
+    "pandas>=2.0.3"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=20.8b1",
+    "isort>=5.0",
+    "mypy>=0.800",
+]
+
+[project.urls]
+Homepage = "https://github.com/juandisay"
+
+[project.scripts]
+sohoo = "sohoo:main"
+
+[tool.setuptools]
+packages = ["sohoo"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+sohoo = ["py.typed", "*.pyi", "**/*.pyi"]
