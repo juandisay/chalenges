@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neural_api"
+version = "0.1.1"
+authors = [
+    {name = "juandisay", email = "info@juandisay.org"},
+]
+description = "A neural_api module"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+
+dependencies = [
+    "requests>=2.25.0",
+    "urllib3>=1.26.0",
+    "pandas>=2.0.3",
+    "fastapi==0.68.1",
+    "uvicorn==0.15.0",
+    "python-multipart==0.0.5",
+    "Pillow==9.3.0",
+    "pydantic==1.8.2",
+    "python-jose==3.3.0",
+    "passlib==1.7.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=20.8b1",
+    "isort>=5.0",
+    "mypy>=0.800",
+]
+
+[project.urls]
+Homepage = "https://github.com/juandisay"
+
+[project.scripts]
+neural_api = "neural_api:main"
+
+[tool.setuptools]
+packages = ["neural_api"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+neural_api = ["py.typed", "*.pyi", "**/*.pyi"]

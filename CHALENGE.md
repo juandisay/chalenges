@@ -23,14 +23,6 @@ Akurasi perhitungan analisis.
 Kode bersih dan terdokumentasi.
 ```
 
-SOLVED:
-Project diatas saya kerjakan di project yang saya namakan `sohoo`
-Untuk menjalankannya
-```
-make install
-
-make run-sohoo
-```
 
 
 
